@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Disclaimer - KAGI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <!-- SEO Meta Tags -->
+   <meta name="description" content="Kagi adalah kalkulator cerdas untuk menghitung alokasi gaji dengan ideal">
+  <meta name="keywords" content="kagi, kalkulator alokasi gaji, persentase alokasi gaji bulanan, alokasi gaji 5 juta, persentase pembagian gaji menurut islam, alokasi gaji 10 juta, pembagian gaji 50 30 20, tabungan ideal bera persen dari gaji, alokasi gaji yang ideal, aturan 50/30/20, 70/20/10 rule, apa saja strategi keuangan, 5 langkah perencanaan keuangan, apa itu sistem 50/30/30, 5 langkah manajemen strategi, cara mengatur keuangan 50-30-20, cara mengatur keuangan pribadi
+">
+  <meta name="last-updated" content="2025-10-03 09:08:54 UTC">
+  <meta name="google-site-verification" content="W_u6t5fcVZp7WBuKcDCb6SKvaSnMpsDd4g68AxZX-H4">
+  <meta name="google-adsense-account" content="">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaji.pages.dev/">
+  <meta property="og:title" content="Kalkulator Alokasi Gaji Ideal - KAGI">
+  <meta property="og:image" content="kagi-og.webp">
+  <meta property="og:description" content="Kagi kalkulator gaji cerdas menghitung alokasi gaji dengan ideal">
+  <meta property="og:site_name" content="Kagi">
+  
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@thepracticaldev">
+  <meta name="twitter:title" content="Kalkulator Alokasi Gaji Ideal - KAGI">
+  <meta name="twitter:description" content="Kagi kalkulator gaji cerdas menghitung alokasi gaji dengan ideal">
+  <meta name="twitter:image:src" content="kagi-og.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Robots & Canonical -->
+  <meta name="robots" content="NOODP,INDEX,FOLLOW,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://gaji.pages.dev/">
+  <link rel="dns-prefetch" href="https://gaji.pages.dev">
+  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="icon-16.png">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="icon-256.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="icon-128.png">
+  <link rel="apple-touch-icon" sizes="64x64" href="icon-64.png">
+  <link rel="apple-touch-icon" sizes="24x24" href="icon-24.png">
+  
+  <!-- Theme Colors -->
+  <meta name="apple-mobile-web-app-title" content="Kagi">
+  <meta name="application-name" content="Kagi">
+  <meta name="theme-color" content="#1a2735" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1620" media="(prefers-color-scheme: dark)">
+  
+  <style>
+    :root{--primary:#007bff;--primary-dark:#0056b3;--bg:#f7f7f7;--card:#fff;--text:#333;--border:#ddd;--sidebar:#eef}
+    *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);padding-bottom:80px}
+    .navbar{position:sticky;top:0;z-index:1000;background:var(--primary);color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .navbar h1{font-size:1.25rem;margin:0}
+    .nav-links{display:flex;gap:15px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:#fff;text-decoration:none;font-size:.95rem}
+    .burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+    .burger span{width:24px;height:3px;background:#fff;border-radius:2px}
+    .wrapper{display:flex;max-width:1200px;margin:auto;gap:20px;padding:20px}
+    .main{flex:1;min-width:0}
+    .sidebar{width:280px;position:sticky;top:80px;height:fit-content;background:var(--sidebar);border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .card{background:var(--card);padding:25px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    label{font-weight:600}
+    input[type=number],select{width:100%;padding:10px;margin:8px 0 15px;border:1px solid var(--border);border-radius:4px;font-size:16px}
+    button{width:100%;padding:12px;font-size:16px;border:none;border-radius:4px;background:var(--primary);color:#fff;cursor:pointer}
+    button:hover{background:var(--primary-dark)}
+    #hasil{margin-top:25px;display:none}
+    table{width:100%;border-collapse:collapse;margin-bottom:15px}
+    th,td{padding:10px;border:1px solid var(--border);text-align:left}
+    th{background:#f2f2f2}
+    .keterangan{padding:10px;border-radius:4px;margin-top:10px;font-weight:600}
+    .minus{background:#ffe0e0;color:#b71c1c}
+    .pas{background:#fff8e1;color:#f57f17}
+    .ideal{background:#e8f5e9;color:#2e7d32}
+    @media(max-width:768px){
+      .nav-links{position:absolute;top:48px;right:20px;background:var(--primary-dark);flex-direction:column;padding:10px;border-radius:6px;display:none}
+      .nav-links.show{display:flex}
+      .burger{display:flex}
+      .wrapper{flex-direction:column}
+      .sidebar{width:100%;position:static}
+    }
+.share-bar{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:#000000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:10px 0;
+  box-shadow:0 -2px 6px rgba(0,0,0,.15);
+  z-index:9999;
+}
+.share-bar .share-label{color:#fff;font-size:14px;margin-right:8px}
+.share-bar a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;height:36px;
+  background:rgba(255,255,255,.15);
+  border-radius:50%;
+  transition:background .2s;
+}
+.share-bar a:hover{background:rgba(255,255,255,.25)}
+.share-bar img{width:20px;height:20px}
+  </style>
+<!-- JSON-LD FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "KAGI - Kalkulator Alokasi Gaji Ideal",
+  "url": "https://gaji.pages.dev",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Kagi adalah kalkulator cerdas untuk menghitung alokasi gaji dengan ideal",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "IDR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "KAGI",
+    "url": "https://gaji.pages.dev"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "1247"
+  },
+  "featureList": [
+    "Alokasi otomatis 50/30/20 atau 35/30/35",
+    "Opsi sedekah 2,5 %",
+    "Perhitungan dana darurat",
+    "Bagikan hasil via Facebook, Twitter, Telegram, LinkedIn"
+  ],
+  "screenshot": "https://gaji.pages.dev/preview.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa itu kalkulator gaji Kagi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kalkulator online otomatis bagi gaji ke pos kebutuhan, tabungan, cicilan & dana darurat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah kalkulator gaji Kagi gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, selamanya gratis tanpa registrasi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara menggunakan kalkulator gaji Kagi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Isi gaji, pilih sedekah & darurat, masukkan sewa/cicilan, klik Hitung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa persen ideal menabung dari gaji?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimal 10% untuk tabungan & investasi jangka panjang."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa alokasi gaji yang terbaik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30% kebutuhan, 20% reward, 10% tabungan, 30% cicilan, 10% sedekah & darurat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa itu sistem 50/30/20?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50% kebutuhan, 30% keinginan, 20% tabungan; versi lama yang masih populer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa itu prinsip 40 30 20 10?",
+        "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "40% kebutuhan, 30% cicilan, 20% tabungan, 10% gaya hidup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gaji 10 juta harus nabung berapa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ikuti Kagi: 1 juta (10%) + sisa alokasi 10% bisa jadi total 2 juta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah realistis untuk menabung 20% dari pendapatan Anda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sangat realistis; kurangi cicilan atau gaya hidup sedikit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana menambah penghasilan dari online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pelajari produk digital gratis di AZDigital.biz.id & mulai jualan online."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>🪙KALKULATOR GAJI</h1>
+  <div class="burger" onclick="toggleBurger()"><span></span><span></span><span></span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="blog">Blog</a></li>
+    <li><a href="tentang">Tentang</a></li>
+    <li><a href="kebijakan-privasi">Kebijakan Privasi</a></li>
+    <li><a href="ketentuan-layanan">Ketentuan Layanan</a></li>
+    <li><a href="disclaimer">Disclaimer</a></li>
+    <li><a href="#tentang">Kontak Kami</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper">
+  <main class="main">
+    <div class="card">
+    <h2 id="tentang">Disclaimer &amp; Kebijakan Iklan</h2>
+
+  <p>
+    <strong>Kalkulator Gaji <em>“sebagaimana adanya” (as-is)</em> hanya untuk tujuan edukatif dan informasi umum.</strong>  
+    Hasil perhitungan bersifat illustratif dan <strong>bukan merupakan nasihat keuangan, pajak, atau hukum profesional</strong>.  
+    Anda bertanggung jawab penuh atas keputusan finansial yang diambil berdasarkan informasi di situs ini.  
+    Kami tidak menjamin keakuratan, kelengkapan, atau keandalan hasil kalkulator serta tidak bertanggung jawab atas segala kerugian atau risiko yang timbul.
+  </p>
+
+  <p>
+    <strong>Konten ini tidak ditujukan untuk anak-anak di bawah 13 tahun.</strong>  
+    Jika Anda berusia &lt; 18 tahun, harap gunakan layanan ini bersama orang tua atau wali.
+  </p>
+
+  <h3>Kebijakan Iklan Google AdSense</h3>
+  <ul>
+    <li>Halaman ini menampilkan iklan Google AdSense guna menutupi biaya operasional server, pemeliharaan fitur, dan penulisan konten gratis.</li>
+    <li>Kami menyaring iklan agar tidak mengandung konten dewasa, kekerasan, diskriminasi, SARA, rokok &amp; minuman beralkohol, senjata, obat-obatan terlarang, serta topik kontroversial lainnya yang dilarang oleh <a href="https://support.google.com/adsense/answer/48182" target="_blank" rel="noopener">Pedoman Google AdSense</a>.</li>
+    <li>Anda dapat mengontrol jenis iklan yang muncul melalui <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Pengaturan Iklan Google</a> atau mengklik ikon “i”/“x” pada unit iklan untuk melaporkan iklan yang dianggap tidak pantas.</li>
+    <li>Google menggunakan cookie atau pengenal unik untuk menampilkan iklan yang relevan. Pelajari lebih lanjut di <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses data when you use our partners’ sites or apps</a>.</li>
+  </ul>
+
+  <h3>Privasi &amp; Cookie</h3>
+  <p>
+    Kami tidak menyimpan, mengumpulkan, atau mentransmisikan data pribadi apa pun (termasuk nilai gaji yang Anda masukkan).  
+    Semua perhitungan dilakukan 100% di perangkat Anda (client-side).  
+    Penggunaan Google AdSense berarti pihak ketiga (Google) dapat memasang atau membaca cookie di browser Anda sesuai dengan 
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.  
+    Untuk EEA/UK/California, Google menampilkan iklan berbasis <em>limited ads</em> jika Anda tidak memberikan persetujuan cookie.
+  </p>
+
+  <h3>Tautan Pihak Ketiga</h3>
+  <p>
+    Situs ini mungkin memuat tautan ke situs eksternal. Kami tidak bertanggung jawab atas isi atau kebijakan privasi situs tersebut.
+  </p>
+
+  <h3>Hubungi Kami</h3>
+  <p>
+    Jika menemukan iklan yang melanggar pedoman, memiliki pertanyaan, atau ingin menyarankan fitur, silakan email ke  
+    <a href="mailto:serviceindexing@gmail.com">serviceindexing@gmail.com</a>.  
+    Kami akan berupaya merespons dalam waktu 2×24 jam hari kerja.
+  </p>
+
+  <p>
+    Terakhir diperbarui: 3 Oktober 2025.
+  </p>
+      </div>
+   
+  </main>
+
+  <aside class="sidebar" id="tentang">
+    <h3>Cara Kerja Kalkulator</h3>
+    <ol style="padding-left:18px;margin:0;font-size:.9rem;line-height:1.6">
+      <li>Masukkan <strong>gaji kotor</strong> Anda.</li>
+      <li>Pilih <strong>ya/tidak</strong> sewa rumah &amp; isi nominalnya.</li>
+      <li>Masukkan <strong>total cicilan hutang</strong> per bulan (opsional).</li>
+      <li>Tentukan <strong>target dana darurat</strong> (berapa kali pengeluaran).</li>
+      <li>Klik <strong>Hitung</strong> → URL berubah menjadi parameter, hasil otomatis muncul.</li>
+      <li>Parameter bisa dipakai di <em>iframe</em> atau dibagikan sebagai link.</li>
+    </ol>
+  </aside>
+</div>
+
+</div>
+<script>
+  function toggleBurger(){
+    document.getElementById('navLinks').classList.toggle('show');
+  }
+  function toggleSewa(){
+    const sewaDiv = document.getElementById('inputSewa');
+    const kontrak = document.getElementById('kontrakRumah').value;
+    sewaDiv.style.display = kontrak === 'ya' ? 'block' : 'none';
+  }
+  toggleSewa();
+
+  // Ambil parameter dari URL
+  function getParams(){
+    const p = new URLSearchParams(location.search);
+    return {
+      gaji: parseInt(p.get('gaji')) || 0,
+      sewa: parseInt(p.get('sewa')) || 0,
+      kontrakRumah: p.get('kontrakRumah') || 'ya',
+      cicilan: parseInt(p.get('cicilan')) || 0,
+      targetDarurat: parseInt(p.get('targetDarurat')) || 3
+    };
+  }
+
+  // Isi form dari parameter
+  function setForm(){
+    const p = getParams();
+    if(p.gaji){
+      document.getElementById('gaji').value = p.gaji;
+      document.getElementById('sewa').value = p.sewa;
+      document.getElementById('kontrakRumah').value = p.kontrakRumah;
+      document.getElementById('cicilan').value = p.cicilan;
+      document.getElementById('targetDarurat').value = p.targetDarurat;
+      toggleSewa();
+      hitungAnggaran();
+    }
+  }
+
+  // Hitung + update URL tanpa reload
+  function hitungDanUpdateURL(){
+    const gaji = parseInt(document.getElementById('gaji').value) || 0;
+    const sewa = parseInt(document.getElementById('sewa').value) || 0;
+    const kontrak = document.getElementById('kontrakRumah').value;
+    const cicilan = parseInt(document.getElementById('cicilan').value) || 0;
+    const dar = parseInt(document.getElementById('targetDarurat').value) || 3;
+    if(!gaji){ alert('Masukkan nominal gaji.'); return; }
+
+    const url = new URL(location.href);
+    url.searchParams.set('gaji', gaji);
+    url.searchParams.set('sewa', sewa);
+    url.searchParams.set('kontrakRumah', kontrak);
+    url.searchParams.set('cicilan', cicilan);
+    url.searchParams.set('targetDarurat', dar);
+    window.history.replaceState(null, null, url.toString());
+
+    hitungAnggaran();
+  }
+
+  // Logika hitung
+  function hitungAnggaran(){
+    const p = getParams();
+    const gaji = p.gaji;
+    const sewa = p.sewa;
+    const kontrak = p.kontrakRumah;
+    const cicilan = p.cicilan;
+    const kali = p.targetDarurat;
+    if(!gaji) return;
+
+    let pKeb, pIng, pTab;
+    if(kontrak === 'ya'){
+      pKeb = 50; pIng = 30; pTab = 20;
+    }else{
+      pKeb = 35; pIng = 30; pTab = 35;
+    }
+
+    const nKeb = Math.round(gaji * pKeb / 100);
+    const nIng = Math.round(gaji * pIng / 100);
+    const nTab = Math.round(gaji * pTab / 100);
+
+    // Hitung pengeluaran bulanan termasuk cicilan
+    const pengBln = (nKeb - sewa) + Math.round(nIng * 0.5) + sewa + cicilan;
+    const targetDD = pengBln * kali;
+    const alokDD = Math.min(nTab, targetDD);
+
+    document.getElementById('pKebutuhan').textContent = pKeb + '%';
+    document.getElementById('pKeinginan').textContent = pIng + '%';
+    document.getElementById('pTabungan').textContent = pTab + '%';
+    document.getElementById('n50').textContent = nKeb.toLocaleString('id-ID');
+    document.getElementById('n30').textContent = nIng.toLocaleString('id-ID');
+    document.getElementById('n20').textContent = nTab.toLocaleString('id-ID');
+    document.getElementById('dd').textContent = alokDD.toLocaleString('id-ID') + ' (target ' + kali + '× pengeluaran)';
+    document.getElementById('hasil').style.display = 'block';
+  }
+
+  // Auto-run jika ada parameter
+  setForm();
+</script>
+
+</body>
+</html>
