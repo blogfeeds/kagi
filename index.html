@@ -210,6 +210,48 @@
     footer img{height:40px;margin-bottom:10px;}
     footer a{color:#fff;text-decoration:none;}
     footer a:hover{text-decoration:underline;}
+    /* --- Hilangkan underline pada semua hyperlink --- */
+a {
+  text-decoration: none;       /* hapus garis bawah */
+  color: inherit;              /* optional: biar warna mengikuti teks */
+}
+
+/* kalau mau tetap ada indikasi saat hover (aksesibilitas), tambahkan */
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* --- Ganti bullet list menjadi emoji 🔰 --- */
+/* Cara modern (jika browser support ::marker) */
+ul.custom-bullet {
+  list-style: none;            /* hilangkan default bullet */
+  padding-left: 0;             /* atur jarak jika perlu */
+}
+ul.custom-bullet li::marker {
+  content: "🔰";               /* ganti marker */
+  font-size: 1em;              /* sesuaikan ukuran */
+  margin-right: 0.5em;
+}
+
+/* Fallback yang lebih kompatibel (untuk browser lama) */
+ul.fallback-bullet {
+  list-style: none;
+  padding-left: 0;
+}
+ul.fallback-bullet li {
+  position: relative;
+  padding-left: 1.6em;        /* beri ruang untuk emoji */
+}
+ul.fallback-bullet li::before {
+  content: "🔰";
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1;             /* sesuaikan vertikal alignment */
+}
+
     @media(max-width:768px){
       footer{grid-template-columns:1fr;text-align:center;}
     }
@@ -326,7 +368,7 @@
   <!-- LAYOUT -->
   <div class="layout">
     <aside class="sidebar"><b>SPONSOR</b>
-      <br><a href="https://www.azdigital.biz.id" title="az digital" target="_blank">🔰 <font color="#3390EC">Panduan bisnis produk digital</font></a>
+      <li><a href="https://www.azdigital.biz.id" title="az digital" target="_blank"><font color="#3390EC">Panduan bisnis produk digital</font></a></li>
     </aside>
 
     <main class="main">
