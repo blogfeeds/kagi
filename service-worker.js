@@ -56,7 +56,7 @@ self.addEventListener('fetch', event => {
           caches.open(RUNTIME_CACHE).then(cache => cache.put(request, copy));
           return response;
         })
-        .catch(() => caches.match(request).then(r => r || caches.match('/offline.html'))
+        .catch(() => caches.match(request).then(r => r || caches.match('offline.html'))
     );
     return;
   }
@@ -73,7 +73,7 @@ self.addEventListener('fetch', event => {
         return response;
       }).catch(() => {
         // Optionally return a fallback image for images
-        if (request.destination === 'image') return caches.match('/icons/icon-192.png');
+        if (request.destination === 'image') return caches.match('icon-512.png');
       }))
     );
     return;
