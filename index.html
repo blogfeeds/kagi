@@ -689,6 +689,45 @@
   ]
 }
 </script>
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => {
+        console.log('Service Worker registered:', reg);
 
+        // Listen for updates
+        if (reg.waiting) {
+          // There's an updated SW waiting to activate
+          notifyUpdate(reg);
+        }
+
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New update available
+              notifyUpdate(reg);
+            }
+          });
+        });
+      })
+      .catch(err => console.error('SW registration failed:', err));
+
+    // Optional: listen for controlling service worker changes
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload();
+    });
+  });
+}
+
+function notifyUpdate(reg) {
+  // Very small UI hook — adapt as needed
+  console.log('New content available — please refresh.');
+  // Example: dispatch a custom event the app can listen to
+  window.dispatchEvent(new CustomEvent('swUpdated', { detail: reg }));
+}
+  
+</script>
 </body>
 </html>
