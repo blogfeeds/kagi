@@ -8,8 +8,6 @@
   <meta name="keywords" content="kagi, kalkulator alokasi gaji, persentase alokasi gaji bulanan, alokasi gaji 5 juta, persentase pembagian gaji menurut islam, alokasi gaji 10 juta, pembagian gaji 50 30 20, tabungan ideal bera persen dari gaji, alokasi gaji yang ideal, aturan 50/30/20, 70/20/10 rule, apa saja strategi keuangan, 5 langkah perencanaan keuangan, apa itu sistem 50/30/30, 5 langkah manajemen strategi, cara mengatur keuangan 50-30-20, cara mengatur keuangan pribadi">
 <link rel="canoncal" href="https://gaji.pages.dev">
   <meta name="last-updated" content="2025-10-03 09:08:54 UTC">
-  <meta name="google-adsense-account" content="ca-pub-2787810764946057">
-  <meta name="google-site-verification" content="kNjHkvngezEnkoZVik8KZ37GFclKaggKdROdG1fWJKA" />
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gaji.pages.dev/">
@@ -24,13 +22,13 @@
   <meta name="twitter:description" content="Kagi kalkulator gaji cerdas menghitung alokasi gaji dengan ideal">
   <meta name="twitter:image:src" content="https://gaji.pages.dev/kagi-og.webp">
   <meta name="twitter:card" content="summary_large_image">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0b74de">
+
   <!-- Robots & Canonical -->
-  <meta name="robots" content="INDEX,FOLLOW,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gaji.pages.dev/">
+  <link rel="preconnect" href="https://gaji.pages.dev">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+  <link rel="preconnect" href="//pagead2.googlesyndication.com">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="icon-16.png">
@@ -307,14 +305,13 @@
   ]
 }
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2787810764946057"
-     crossorigin="anonymous"></script>
+
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <img src="logo-header.png" alt="Logo KAGI" width="100%">
+    <img src="logo-header.png" alt="Logo KAGI">
     <div class="burger" onclick="toggleBurger()"><span></span><span></span><span></span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/" title="home">Home</a></li>
@@ -690,45 +687,6 @@
   ]
 }
 </script>
-<script>
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(reg => {
-        console.log('Service Worker registered:', reg);
 
-        // Listen for updates
-        if (reg.waiting) {
-          // There's an updated SW waiting to activate
-          notifyUpdate(reg);
-        }
-
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New update available
-              notifyUpdate(reg);
-            }
-          });
-        });
-      })
-      .catch(err => console.error('SW registration failed:', err));
-
-    // Optional: listen for controlling service worker changes
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-      window.location.reload();
-    });
-  });
-}
-
-function notifyUpdate(reg) {
-  // Very small UI hook — adapt as needed
-  console.log('New content available — please refresh.');
-  // Example: dispatch a custom event the app can listen to
-  window.dispatchEvent(new CustomEvent('swUpdated', { detail: reg }));
-}
-  
-</script>
 </body>
 </html>
